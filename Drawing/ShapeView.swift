@@ -14,10 +14,14 @@ struct ShapeView: View {
         VStack {
             Text("Placar")
                 .font(.largeTitle.bold())
+            Image("CupAndDices")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 250)
             Spacer()
             ZStack {
                 ScoreGrid(startAngle: .degrees(180), endAngle: .degrees(0), clockwise: true)
-                    .stroke(.primary, lineWidth: 10)
+                    .stroke(Color("bozo_green"), lineWidth: 10)
                     
                 
                 VStack(spacing: 70) {
